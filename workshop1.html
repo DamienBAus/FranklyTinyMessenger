@@ -18,6 +18,8 @@
 			height: 65px;
 			
 			background: #FFFFFF;
+			
+			text-align: center;
 		}
 		
 		.frankly-app-name{
@@ -35,15 +37,49 @@
 		}
 		
 		.frankly-messenger-chat-area {
-			background: #FFFFFF;
 			min-width: 600px;
 			width: 70%;
 			max-width: 1200px;
-			min-height: calc(100vh - 105px);   /* 65px for header + 20px for margin-top + 20px for margin-bottom */
 			margin: 20px auto;
-			border-top-left-radius: 20px;
-			border-top-right-radius: 20px;
+			border-radius: 5px;
+			
+			background: #FFFFFF;
 			box-shadow: 5px 5px 5px #d7d7d7;
+		}
+		
+		.frankly-messages{
+			min-height: calc(100vh - 185px);   /* 65px for header + 40px for margin + 50px for input */
+		}
+		
+		.frankly-message-input{
+			padding: 10px;
+			
+			background-color: #f2f2f2;
+			
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+		
+		.frankly-input{
+			
+			width: calc(100% - 150px);
+			min-height: 50px;
+			
+			border-radius: 5px;
+			border-width: 0;
+			
+			vertical-align: middle;
+		}
+		
+		.frankly-message-send{
+			width: 130px;
+			height: 50px;
+			margin-left: 10px;
+			
+			border-style: none;
+			border-radius: 5px;
+			
+			vertical-align: middle;
 		}
 	
 	</style>
@@ -62,6 +98,8 @@
 			</div>
 			
 			<div class="frankly-message-input">
+				<textarea class="frankly-input"></textarea>
+				<button class="frankly-message-send" >Send Message</button>
 			</div>
 		</div>
 	</body>
