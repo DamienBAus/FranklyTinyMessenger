@@ -31,14 +31,14 @@
 		}
 		
 		.frankly-messenger-header img{
-			width: 40px;
-			margin-left: -15px;
-			margin-bottom: 20px;
+			width: 30px;
+			margin-left: -10px;
+			margin-bottom: 18px;
 		}
 		
 		.frankly-messenger-chat-area {
 			min-width: 600px;
-			width: 70%;
+			width: 55%;
 			max-width: 1200px;
 			margin: 20px auto;
 			border-radius: 5px;
@@ -51,6 +51,35 @@
 			min-height: calc(100vh - 185px);   /* 65px for header + 40px for margin + 50px for input */
 		}
 		
+		.message{
+			max-width: 60%;
+			padding: 10px 20px;
+		}
+		
+		.message .name{
+			font-weight: bold;
+		}
+		
+		.message .content{
+		    display: inline-block; /* Only go as wide as you need to */
+			padding: 5px;
+			border-radius: 5px;
+			margin-top: 7px;
+			
+			background-color: #fe9c8b;
+			color: #ffffff;
+		}
+		
+		.message.me {
+			margin-left: 40%;
+		
+			text-align: right;
+		}
+		
+		.message.me .content{
+			background-color: #fc3d1e;
+		}
+		
 		.frankly-message-input{
 			padding: 10px;
 			
@@ -60,7 +89,7 @@
 			border-bottom-right-radius: 5px;
 		}
 		
-		.frankly-input{
+		.frankly-message-input textarea{
 			
 			width: calc(100% - 150px);
 			min-height: 50px;
@@ -76,10 +105,22 @@
 			height: 50px;
 			margin-left: 10px;
 			
+			background-color: #929292;
+			color: #ffffff;
+			font-weight: bold;
+			
 			border-style: none;
 			border-radius: 5px;
 			
 			vertical-align: middle;
+		}
+		
+		.frankly-message-send:hover{
+			background-color: #797878;
+		}
+		
+		.frankly-message-send:active{
+			background-color: #636262;
 		}
 	
 	</style>
@@ -95,10 +136,22 @@
 		
 		<div class="frankly-messenger-chat-area">
 			<div class="frankly-messages">
+				<div class="message">
+					<div class="name">Skippy</div>
+					<div class="content">I'm a happy little Vegemite,as bright as bright can be!</div>
+				</div>
+				<div class="message me">
+					<div class="name">Me</div>
+					<div class="content">We all enjoy our Vegemite for breakfast lunch and tea!</div>
+				</div>
+				<div class="message">
+					<div class="name">Bruce</div>
+					<div class="content">Our mummies say we're growing stronger every single week! Because we love our Vegemite! We all adore our Vegemite! It puts a rose in every cheek</div>
+				</div>
 			</div>
 			
 			<div class="frankly-message-input">
-				<textarea class="frankly-input"></textarea>
+				<textarea></textarea>
 				<button class="frankly-message-send" >Send Message</button>
 			</div>
 		</div>
