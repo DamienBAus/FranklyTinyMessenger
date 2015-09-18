@@ -40,7 +40,7 @@ body{
 	box-shadow: 5px 5px 5px #d7d7d7;
 }
 
-.frankly-messages{
+#frankly-messages{
 	min-height: calc(100vh - 185px);   /* 65px for header + 40px for margin + 50px for input */
 }
 
