@@ -1,6 +1,8 @@
 document.getElementById('frankly-message-send').addEventListener("click", sendMessage)
 			
-var myName = "Damien";
+var myName;
+
+myName = prompt("Please enter your name");
 
 function sendMessage(){
 	var messageTextarea = document.getElementById('frankly-message-textarea'),
