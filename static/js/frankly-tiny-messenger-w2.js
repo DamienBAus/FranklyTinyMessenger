@@ -15,6 +15,8 @@ function sendMessage(){
 	//writeMessage(messageToSend);
 	emitMessage(messageToSend);
 	
+	checkWithBot(messageToSend);
+	
 	messageTextarea.value = "";
 }
 
@@ -33,6 +35,15 @@ function writeMessage(message){
 					'</div></div></div>';
 	
 	document.getElementById('frankly-messages').insertAdjacentHTML('beforeend', messageString);
+}
+
+function checkWithBot(message){
+	if (message.content.indexOf("Hi") > -1) {
+		emitMessage({		/* Formerly writeMessage */
+			name: "Bot",
+			content: "Hi there " + message.name + "!"
+		});
+	}
 }
 
 function scrollToBottom(){
