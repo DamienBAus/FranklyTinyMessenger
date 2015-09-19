@@ -1,0 +1,9 @@
+{
+  "name": "frankly-tiny-messenger",
+  "version": "1.0.0",
+  "description": "Frankly Web Demonstration App",
+  "dependencies": {
+    "express": "^4.10.2",
+    "socket.io": "^1.3.6"
+  }
+}
