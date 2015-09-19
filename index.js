@@ -4,14 +4,14 @@ var express = require('express'),
 	io = require('socket.io')(http);
 
 app.get('/', function(req, res){
-  res.sendfile('C:/Users/Damo/Documents/GitHub/FranklyTinyMessenger/workshop2.html');
+  res.sendfile('workshop3.html');
 });
 
-app.use(express.static('C:/Users/Damo/Documents/GitHub/FranklyTinyMessenger/static'));
+app.use(express.static('static'));
 
 io.on('connection', function(socket){
-  socket.on('boardState', function(msg){
-    io.emit('boardState', msg);
+  socket.on('broadcastMessage', function(msg){
+    io.emit('newMessage', msg);
   });
 });
 

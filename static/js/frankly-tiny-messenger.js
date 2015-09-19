@@ -12,13 +12,12 @@ function sendMessage(){
 			name: myName
 		};
 		
-	writeMessage(messageToSend);
+	//writeMessage(messageToSend);
+	emitMessage(messageToSend);
 	
 	checkWithBot(messageToSend);
 	
 	messageTextarea.value = "";
-	
-	scrollToBottom();
 }
 
 function writeMessage(message){
@@ -40,9 +39,9 @@ function writeMessage(message){
 
 function checkWithBot(message){
 	if (message.content.indexOf("Hi") > -1) {
-		writeMessage({
+		emitMessage({		/* Formerly writeMessage */
 			name: "Bot",
-			content: "Hi there!"
+			content: "Hi there " + message.name + "!"
 		});
 	}
 }
@@ -50,3 +49,16 @@ function checkWithBot(message){
 function scrollToBottom(){
 	document.body.scrollTop = document.body.scrollHeight;
 }
+
+/* This code is for facilitating communication across sessions */
+var socket = io();
+
+function emitMessage(message){
+	socket.emit('broadcastMessage', message);
+}
+
+socket.on('newMessage', function(message){
+	writeMessage(message);
+	
+	scrollToBottom();
+});

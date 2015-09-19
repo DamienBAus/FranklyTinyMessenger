@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	
+		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.deep_orange-red.min.css">
+		<link rel="stylesheet" href="css/frankly-tiny-messenger.css">
+		
+		<script src="/socket.io/socket.io.js"></script>
+	
+	</head>
+	
+	<body>
+	
+		<div class="frankly-messenger-header">
+			<span class="frankly-app-name">Frankly Tiny Messenger</span>
+			<img src="images/frankly_logo.png" alt="Frankly Logo">
+		</div>
+		
+		<div class="frankly-messenger-chat-area">
+			<div id="frankly-messages">
+				<div class="message">
+					<div class="name">Skippy</div>
+					<div class="content">We are happy little Vegemites, as bright as bright can be!</div>
+				</div>
+				<div class="message me">
+					<div class="name">Me</div>
+					<div class="content">We all enjoy our Vegemite for breakfast lunch and tea!</div>
+				</div>
+				<div class="message">
+					<div class="name">Bruce</div>
+					<div class="content">Our mummies say we're growing stronger every single week! Because we love our Vegemite! We all adore our Vegemite! It puts a rose in every cheek</div>
+				</div>
+			</div>
+			
+			<div class="frankly-message-input">
+				<textarea id="frankly-message-textarea"></textarea>
+				<button id="frankly-message-send" >Send Message</button>
+			</div>
+		</div>
+		
+		<script src="js/frankly-tiny-messenger.js" type="text/javascript" ></script>
+	</body>
+</html>
