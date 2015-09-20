@@ -1,50 +1,60 @@
 body{
 	margin: 0px;
 	
+	/* A classy light grey to set the mood */
 	background-color: #ededed;
+	
+	/* Stop the page using the default 'Times New Roman' */
+	font-family: "Helvetica","Arial",sans-serif;
+	font-size: 14px;
 }
 
 .frankly-messenger-header{
-	width: 100%;
+	/* How high do we want the header to be? */
 	height: 65px;
 	
+	/* Set the background to be white */
 	background: #FFFFFF;
 	
+	/* Put text in the middle of the line */
 	text-align: center;
 }
 
 .frankly-app-name{
-	padding-left: 55px;
-	
+	/* Set the color, font size and line height of the header text */
 	color: #2f2f2f;
 	font-size: 25px;
-	line-height: 70px;
+	line-height: 65px;
 }
 
 .frankly-messenger-header img{
+	/* Constrain the size of the image - remember, you only need to set width OR height */
 	width: 30px;
 	margin-left: -10px;
-	margin-bottom: 18px;
 }
 
 .frankly-messenger-chat-area {
+	
 	min-width: 600px;
 	width: 55%;
 	max-width: 1200px;
 	margin: 20px auto;
 	overflow: hidden;    /* Keep everything contained in the chat area */
 		
+	/* round the corders of this element */
 	border-radius: 5px;
 	
 	background: #FFFFFF;
-	box-shadow: 5px 5px 5px #d7d7d7;
+	box-shadow: 5px 5px 5px #d7d7d7;	/* Add a light grey drop shadow behind this element */
 }
 
 #frankly-messages{
-	min-height: calc(100vh - 185px);   /* 65px for header + 40px for margin + 50px for input */
+	/* 100vh is the same as saying 'the whole height of the browser window' */
+	min-height: calc(100vh - 195px);   /* 65px for header + 2 * 40px for margin + 50px for input */
 }
 
 .message{
+	/* Let messages grow up to 60% of the width of the chat area before breaking to a newline */
 	max-width: 60%;
 	padding: 10px 20px;
 }
@@ -59,6 +69,7 @@ body{
 	border-radius: 5px;
 	margin-top: 7px;
 	
+	/* A lighter version of the frankly orange */
 	background-color: #fe9c8b;
 	color: #ffffff;
 }
@@ -70,7 +81,7 @@ body{
 }
 
 .message.me .content{
-	background-color: #fc3d1e;
+	background-color: #fc3d1e;	/* The Frankly orange */
 }
 
 .frankly-message-input{
@@ -80,7 +91,7 @@ body{
 }
 
 .frankly-message-input textarea{
-	
+	/* Take up the whole width of the chat area, minus the space needed for the button */
 	width: calc(100% - 150px);
 	min-height: 50px;
 	
@@ -99,16 +110,38 @@ body{
 	color: #ffffff;
 	font-weight: bold;
 	
-	border-style: none;
+	border-style: none;	/*Over-ride default button styles */
 	border-radius: 5px;
 	
 	vertical-align: middle;
 }
 
+/* Become a darker shade of grey when the mouse is hovering over */
 #frankly-message-send:hover{
 	background-color: #797878;
 }
 
+/* Become a darker shade of grey when the mouse is clicking the element */
 #frankly-message-send:active{
 	background-color: #636262;
 }
+
+/* bonus */
+
+/*@font-face {
+	font-family: Michroma;
+	src: url('../fonts/michroma.ttf');
+}
+
+@font-face {
+	font-family: Titillium;
+	src: url('../fonts/TitilliumWeb-Regular.ttf');
+}
+
+body{
+	font-family: Titillium, Michroma, "Helvetica","Arial",sans-serif;
+}
+
+.frankly-message-input textarea{
+	resize: vertical;
+}*/

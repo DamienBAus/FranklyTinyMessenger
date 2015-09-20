@@ -1,10 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-	
-		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.deep_orange-red.min.css">
+		<!-- This title will appear at the top of the browser, and in search engine results -->
+		<title>Frankly Tiny Messenger</title>
+		
+		<!-- Load in the style sheet for this page -->
 		<link rel="stylesheet" href="css/frankly-tiny-messenger.css">
 		
+		<!-- Load in the websocket -->
 		<script src="/socket.io/socket.io.js"></script>
 	
 	</head>
@@ -32,8 +35,8 @@
 				</div>
 			</div>
 			
-			<div class="frankly-message-input">
-				<textarea id="frankly-message-textarea"></textarea>
+			<div id="frankly-message-input">
+				<textarea id="frankly-message-textarea" placeholder="Chat here..."></textarea>
 				<button id="frankly-message-send" >Send Message</button>
 			</div>
 		</div>
