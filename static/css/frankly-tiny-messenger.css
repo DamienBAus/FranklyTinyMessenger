@@ -1,3 +1,4 @@
+/* target the body element */
 body{
 	margin: 0px;
 	
@@ -9,7 +10,8 @@ body{
 	font-size: 14px;
 }
 
-.frankly-messenger-header{
+/* target the element with id 'frankly-messenger-header' */
+#frankly-messenger-header{
 	/* How high do we want the header to be? */
 	height: 65px;
 	
@@ -20,28 +22,29 @@ body{
 	text-align: center;
 }
 
-.frankly-app-name{
+/* target the element with id 'frankly-app-name' */
+#frankly-app-name{
 	/* Set the color, font size and line height of the header text */
 	color: #2f2f2f;
 	font-size: 25px;
 	line-height: 65px;
 }
 
-.frankly-messenger-header img{
+/* target all 'img' tags that sit within the element with id 'frankly-messenger-header' */
+#frankly-messenger-header img{
 	/* Constrain the size of the image - remember, you only need to set width OR height */
 	width: 30px;
 	margin-left: -10px;
 }
 
-.frankly-messenger-chat-area {
-	
+#frankly-messenger-chat-area { 
 	min-width: 600px;
 	width: 55%;
 	max-width: 1200px;
 	margin: 20px auto;
 	overflow: hidden;    /* Keep everything contained in the chat area */
 		
-	/* round the corders of this element */
+	/* round the corners of this element */
 	border-radius: 5px;
 	
 	background: #FFFFFF;
@@ -84,13 +87,13 @@ body{
 	background-color: #fc3d1e;	/* The Frankly orange */
 }
 
-.frankly-message-input{
+#frankly-message-input{
 	padding: 10px;
 	
 	background-color: #f2f2f2;
 }
 
-.frankly-message-input textarea{
+#frankly-message-input textarea{
 	/* Take up the whole width of the chat area, minus the space needed for the button */
 	width: calc(100% - 150px);
 	min-height: 50px;
@@ -99,6 +102,7 @@ body{
 	border-width: 0;
 	
 	vertical-align: middle;
+	resize: vertical;
 }
 
 #frankly-message-send{
