@@ -1,8 +1,16 @@
-document.getElementById('frankly-message-send').addEventListener("click", sendMessage)
+'use strict';
 			
 var myName;
 
-document.body.onload = function(){myName = prompt("Please enter your name");};
+document.body.onload = function(){
+	document.getElementById('frankly-message-send').addEventListener("click", sendMessage);
+
+	document.getElementById('frankly-message-textarea').addEventListener("keyup", 
+		function(event){
+			if(event.keyCode===13) sendMessage();
+		});
+
+	myName = prompt("Please enter your name");};
 
 function sendMessage(){
 	var messageTextarea = document.getElementById('frankly-message-textarea'),
@@ -12,7 +20,7 @@ function sendMessage(){
 			name: myName
 		};
 		
-		if (messageContent == "") {
+		if (messageContent.replace(/\n/g, "") == "") {
 			return;
 		}
 		
