@@ -24,13 +24,13 @@ function sendMessage(){
 			return;
 		}
 		
-	//writeMessage(messageToSend);
+	//writeMessageToScreen(messageToSend);
 	emitMessage(messageToSend);
 	
 	messageTextarea.value = "";
 }
 
-function writeMessage(message){
+function writeMessageToScreen(message){
 	var messageString,
 		messageClasses = "message";
 		
@@ -59,7 +59,7 @@ function emitMessage(message){
 }
 
 socket.on('newMessage', function(message){
-	writeMessage(message);
+	writeMessageToScreen(message);
 	
 	scrollToBottom();
 });
